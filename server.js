@@ -2,8 +2,10 @@
 
 const app = require('./src/app');
 
-const port = process.env.PORT || '3000';
+const { getConfigurations } = require('./src/configuration/configurations');
 
-app.listen(port, () => {
-    console.log(`node-essential start on port ${ port }`)
+const { PORT } = getConfigurations();
+
+app.listen(PORT, () => {
+    console.log(`node-essential start on port ${ PORT }`)
 });
