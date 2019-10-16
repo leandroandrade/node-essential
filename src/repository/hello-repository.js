@@ -1,9 +1,5 @@
 'use strict';
 
-const get = async () => {
-    return 'hello node-essential';
-};
+const repository = async () => 'hello node-essential';
 
-module.exports = {
-    get
-};
+module.exports = repository;

@@ -1,15 +1,16 @@
 'use strict';
 
-const express = require('express');
-const router = express.Router();
+const router = require('express').Router();
 
-const { version } = require('../../package')
+const { version } = require('../../package');
 
-router.get('/', function (req, res, next) {
-    res.status(200).send({
-        title: "node-essential working",
-        version
-    });
-});
+const controller = require('../controllers/hello-controller');
+
+router.get('/', (_, res) => res.status(200).send({
+    title: "node-essential working",
+    version
+}));
+
+router.get('/hello', controller);
 
 module.exports = router;

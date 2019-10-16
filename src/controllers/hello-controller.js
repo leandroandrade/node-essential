@@ -2,11 +2,13 @@
 
 const repository = require('../repository/hello-repository');
 
-exports.get = async (req, res) => {
-    const message = await repository.get();
+const controller = async (req, res) => {
+    const message = await repository();
 
-    res.status(200).send({
+    return res.status(200).send({
         title: "hello",
         message: message
     });
 };
+
+module.exports = controller;

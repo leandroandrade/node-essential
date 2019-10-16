@@ -2,19 +2,10 @@
 
 const express = require('express');
 const app = express();
-const bodyParser = require("body-parser");
 
-//Routes
-const index = require('./routes/index');
-const hello = require('./routes/hello');
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 
-app.use(bodyParser.urlencoded({
-    extended: true
-}));
-
-app.use(bodyParser.json());
-
-app.use('/', index);
-app.use('/hello', hello);
+app.use('/', require('./routes'));
 
 module.exports = app;
