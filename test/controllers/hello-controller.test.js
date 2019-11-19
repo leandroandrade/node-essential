@@ -4,9 +4,9 @@ const request = require('supertest');
 
 const app = require('../../src/app');
 
-describe('get liturgia diaria', function () {
+describe('simple test', () => {
 
-    it('deve retornar as liturgias', async (done) => {
+    it('should do something', async (done) => {
 
         const { status, body } = await request(app)
             .get('/hello');
@@ -20,6 +20,4 @@ describe('get liturgia diaria', function () {
         done();
 
     });
-
-
 });

@@ -6,7 +6,7 @@ const { version } = require('../../package');
 
 const controller = require('../controllers/hello-controller');
 
-router.get('/', (_, res) => res.status(200).send({
+router.get('/', (_, res) => res.json({
     title: "node-essential working",
     version
 }));
