@@ -1,5 +1,7 @@
+const logger = require('../logger');
+
 module.exports = (err, req, res, next) => {
-    // console.error('Server ERROR:', err);
+    logger.error('Server ERROR:', err);
 
     next(err);
 };
