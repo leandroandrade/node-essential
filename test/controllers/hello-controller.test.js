@@ -1,15 +1,10 @@
-'use strict';
-
 const request = require('supertest');
 
 const app = require('../../src/app');
 
 describe('simple test', () => {
-
-    it('should do something', async (done) => {
-
-        const { status, body } = await request(app)
-            .get('/hello');
+    it('should do something', async done => {
+        const { status, body } = await request(app).get('/api/v1/hello');
 
         const { title, message } = body;
 
@@ -18,6 +13,5 @@ describe('simple test', () => {
         expect(message).toBe('hello node-essential');
 
         done();
-
     });
 });
