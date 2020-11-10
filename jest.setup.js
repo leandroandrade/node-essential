@@ -1,1 +1,1 @@
-require('dotenv-safe').config({ file: '.env.test' });
+require('dotenv-safe').config({ path: '.env.test' });
