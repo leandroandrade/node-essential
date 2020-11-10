@@ -1,4 +1,4 @@
-const httpErrors = require('../../src/commons/http-error');
+const httpErrors = require('../../../src/commons/http-error');
 
 describe('http errors test', () => {
     it('should return list of 2 createErrors', async done => {
