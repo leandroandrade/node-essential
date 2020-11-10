@@ -1,5 +1,5 @@
 # node-essential
-Minimalistic Nodejs API project Setup
+Minimalistic Nodejs API project setup.
 
 Installation:
 
@@ -9,3 +9,8 @@ Installation:
 3. cd ./node-essential/
 4. npm install
 5. npm run dev or npm start
+
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](https://github.com/leandroandrade/node-essential/blob/master/LICENSE) file for details
