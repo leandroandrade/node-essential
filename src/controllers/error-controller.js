@@ -1,5 +1,5 @@
-const { createError } = require('../commons/http-error');
+const { createErrors } = require('../commons/http-error');
 
 exports.error = async (req, res, next) => {
-    return next(createError(400, `This is a simple error example!`));
+    return next(createErrors(400, `This is a simple error example!`));
 };
