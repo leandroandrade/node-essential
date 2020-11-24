@@ -7,9 +7,9 @@ module.exports = app => {
     const swagger = path.join(__dirname, '..', '..', '..', 'swagger', 'example-swagger.yaml');
     const document = yamljs.load(swagger);
 
-    app.use('/spec', express.static(swagger));
+    app.use('/api-specs', express.static(swagger));
     app.use(
-        '/docs',
+        '/api-docs',
         (req, res, next) => {
             document.host = req.get('host');
             next();
