@@ -8,13 +8,13 @@ describe('simple error test', () => {
 
         expect(status).toBe(400);
 
-        const { mensagens } = body;
-        expect(mensagens.length).toBe(1);
+        const { messages } = body;
+        expect(messages.length).toBe(1);
 
-        const [mensagem] = mensagens;
-        const { codigo, mensagem: detalhe } = mensagem;
-        expect(codigo).toBe(400);
-        expect(detalhe).toBe('This is a simple error example!');
+        const [data] = messages;
+        const { code, message } = data;
+        expect(code).toBe(400);
+        expect(message).toBe('This is a simple error example!');
 
         done();
     });

@@ -1,5 +1,5 @@
-const { createErrors } = require('../commons/http-error');
+const { InvalidInputError } = require('../commons/errors');
 
 exports.error = async (req, res, next) => {
-    return next(createErrors(400, `This is a simple error example!`));
+    return next(new InvalidInputError(`This is a simple error example!`));
 };
