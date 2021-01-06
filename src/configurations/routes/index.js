@@ -1,8 +1,8 @@
 const router = require('express').Router();
 
 const { version } = require('../../../package.json');
-const { controller } = require('../../controllers/hello-controller');
-const { error } = require('../../controllers/error-controller');
+const { controller } = require('../../entrypoints/rest/hello-controller');
+const { error } = require('../../entrypoints/rest/error-controller');
 
 module.exports = app => {
     router.get('/', (_, res) =>
