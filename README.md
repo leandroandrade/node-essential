@@ -10,6 +10,15 @@ Installation:
 4. npm install
 5. npm run dev or npm start
 
+## Disclaimer
+
+This project is contant improvement. Fell free to suggest new improvements.
+
+## Motivation
+
+The purpose of this project is a simple bootstrap project using Node.js platform and Clean Architecture principles like in the image below.
+
+![Clean Architecture](docs/simple-clean-architecture.png?raw=true "Title")
 
 ## License
 
