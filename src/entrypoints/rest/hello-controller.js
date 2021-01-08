@@ -1,4 +1,4 @@
-const { repository } = require('../../repositories/hello-repository');
+const { repository } = require('../../dataproviders/repositories/hello-repository');
 
 exports.controller = async (req, res) => {
     const message = await repository();
