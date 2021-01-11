@@ -1,6 +1,6 @@
 const request = require('supertest');
 
-const app = require('../../../../src/app');
+const app = require('../../../../src/configurations/app');
 
 describe('simple error test', () => {
     it('should return error', async done => {
