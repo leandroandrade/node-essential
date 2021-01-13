@@ -1,10 +1,10 @@
 const log = require('../logger');
 
-const shutdown = (signal, server) => {
+const exit = (signal, server) => {
     log.info(`${signal} signal received`);
 
     log.info('Closing HTTP server...');
-    server.close(async () => {
+    server.close(() => {
         log.info('HTTP server closed!');
 
         process.exit(0);
@@ -12,6 +12,6 @@ const shutdown = (signal, server) => {
 };
 
 module.exports = server => {
-    process.on('SIGTERM', () => shutdown('SIGTERM', server));
-    process.on('SIGINT', () => shutdown('SIGINT', server));
+    process.on('SIGTERM', () => exit('SIGTERM', server));
+    process.on('SIGINT', () => exit('SIGINT', server));
 };
