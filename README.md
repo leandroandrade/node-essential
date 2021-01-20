@@ -20,6 +20,9 @@ The purpose of this project is a simple bootstrap project using Node.js platform
 
 ![Clean Architecture](docs/simple-clean-architecture.png?raw=true "Title")
 
+## Many Thanks to all the `Stargazers`:
+[![Stargazers repo roster for @leandroandrade/node-essential](https://reporoster.com/stars/leandroandrade/node-essential)](https://github.com/leandroandrade/node-essential/stargazers)
+
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE.md](https://github.com/leandroandrade/node-essential/blob/master/LICENSE) file for details
