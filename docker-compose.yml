@@ -6,9 +6,8 @@ services:
     container_name: node-essential
     ports:
       - 3333:3333
-    environment:
-      PORT: 3333
-      NODE_ENV: production
+    env_file:
+      - .env.production
     networks:
       - local-net
 

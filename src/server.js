@@ -1,12 +1,9 @@
-require('dotenv-safe/config');
 const logger = require('./configurations/logger');
 const exit = require('./configurations/exit');
 
-const { PORT } = process.env;
-
 const app = require('./configurations/app');
 
-const server = app.listen(PORT, () => {
-    logger.info(`node-essential start on port ${PORT}`);
+const server = app.listen(process.env.PORT, () => {
+    logger.info(`node-essential start on port ${process.env.PORT}`);
     exit(server);
 });

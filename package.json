@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node src/server.js",
     "dev": "nodemon src/server.js",
-    "test": "jest --coverage"
+    "test": "NODE_ENV=test jest --coverage"
   },
   "author": "Leandro Andrade",
   "license": "MIT",
