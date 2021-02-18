@@ -1,7 +1,6 @@
 node_modules
 Dockerfile
 test
-swagger
 coverage
 README.md
 .dockerignore
@@ -10,4 +9,3 @@ README.md
 .eslintrc.js
 .prettierrc
 .env
-.env.example
