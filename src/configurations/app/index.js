@@ -1,9 +1,10 @@
-require('dotenv-safe').config({
-    path: process.env.NODE_ENV === 'test' ? '.env.test' : '.env',
-});
-
 const express = require('express');
 require('express-async-errors');
+
+const dotenv = require('dotenv');
+const envs = require('../env');
+
+dotenv.config({ path: envs[process.env.NODE_ENV || 'default'] });
 
 const app = express();
 
