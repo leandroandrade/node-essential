@@ -1,3 +1,5 @@
+const { httpErrors } = require('../../commons/http');
+
 module.exports = (err, req, res, next) => {
     const { statusCode, messages, message, date = new Date() } = err;
 
@@ -11,7 +13,7 @@ module.exports = (err, req, res, next) => {
         });
     }
 
-    return res.status(500).send({
-        messages: messages || [{ code: 500, message: 'Ocorreu um erro no servidor.', date }],
+    return res.status(httpErrors.INTERNAL_SERVER_ERROR).send({
+        messages: messages || [{ code: 500, message: 'Internet Server Errror', date }],
     });
 };
