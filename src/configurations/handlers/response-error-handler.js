@@ -14,6 +14,8 @@ module.exports = (err, req, res, next) => {
     }
 
     return res.status(httpErrors.INTERNAL_SERVER_ERROR).send({
-        messages: messages || [{ code: 500, message: 'Internet Server Errror', date }],
+        messages: messages || [
+            { code: httpErrors.INTERNAL_SERVER_ERROR, message: 'Internet Server Errror', date },
+        ],
     });
 };
